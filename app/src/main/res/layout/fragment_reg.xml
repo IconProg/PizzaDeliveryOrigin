@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/value_48_dp"
+        app:layout_editor_absoluteX="@dimen/value_24_dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/value_24_dp"
+        app:layout_editor_absoluteX="@dimen/value_24_dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/value_24_dp"
+        app:layout_editor_absoluteY="@dimen/value_24_dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/value_24_dp"
+        app:layout_editor_absoluteY="@dimen/value_24_dp" />
+
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/welcome_reg"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toTopOf="@id/guide_line_horizontal_top" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/value_8_dp"
+        android:gravity="center"
+        android:text="@string/complite_reg"
+        android:textSize="@dimen/value_18_sp"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/welcome" />
+
+    <TextView
+        android:id="@+id/your_email"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/value_8_dp"
+        android:layout_marginTop="@dimen/value_24_dp"
+        android:text="@string/your_email"
+        android:textSize="@dimen/value_12_sp"
+        app:layout_constraintBottom_toTopOf="@id/editText_email"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <EditText
+        android:id="@+id/editText_email"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        style="@style/EditTextStyle"
+        android:background="@drawable/custom_edit_text"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/your_email" />
+
+    <TextView
+        android:id="@+id/your_password"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/value_8_dp"
+        android:layout_marginTop="@dimen/value_24_dp"
+        android:text="@string/password_6_symbols"
+        android:textSize="@dimen/value_12_sp"
+        app:layout_constraintBottom_toTopOf="@id/editText_password"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/editText_email" />
+
+    <EditText
+        android:id="@+id/editText_password"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        style="@style/EditTextStyle"
+        android:background="@drawable/custom_edit_text"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/your_password" />
+
+    <TextView
+        android:id="@+id/confirm_password"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/value_8_dp"
+        android:layout_marginTop="@dimen/value_24_dp"
+        android:text="@string/confirm_password"
+        android:textSize="@dimen/value_12_sp"
+        app:layout_constraintBottom_toTopOf="@id/editText_confirm_password"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/editText_password" />
+
+    <EditText
+        android:id="@+id/editText_confirm_password"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        style="@style/EditTextStyle"
+        android:background="@drawable/custom_edit_text"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/confirm_password" />
+
+    <Button
+        android:id="@+id/regButton"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="@dimen/value_40_dp"
+        android:layout_marginTop="@dimen/value_40_dp"
+        android:background="@drawable/custom_default_button"
+        android:text="@string/reg"
+        style="@style/ButtonStyle"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/editText_confirm_password" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

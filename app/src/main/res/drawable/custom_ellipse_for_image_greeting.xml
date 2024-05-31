@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/light_gray_ellipse_greeting"/>
+            <padding android:bottom="@dimen/value_24_dp"
+                android:top="@dimen/value_24_dp"
+                android:left="@dimen/value_24_dp"
+                android:right="@dimen/value_24_dp"/>
+        </shape>
+    </item>
+</selector>

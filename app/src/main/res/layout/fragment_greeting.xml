@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.greeting.GreetingFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/value_24_dp"
+        app:layout_editor_absoluteX="@dimen/value_24_dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/value_24_dp"
+        app:layout_editor_absoluteX="@dimen/value_24_dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_left_for_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/value_72_dp"
+        app:layout_editor_absoluteX="@dimen/value_72_dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/value_24_dp"
+        app:layout_editor_absoluteX="@dimen/value_24_dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/value_24_dp"
+        app:layout_editor_absoluteX="@dimen/value_24_dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_right_for_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/value_72_dp"
+        app:layout_editor_absoluteX="@dimen/value_72_dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_top_first_for_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/value_200_dp"
+        app:layout_editor_absoluteY="@dimen/value_200_dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_top_second_for_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/value_372_dp"
+        app:layout_editor_absoluteY="@dimen/value_372_dp"/>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/icon_courier"
+        android:layout_width="@dimen/value_120_dp"
+        android:layout_height="@dimen/value_120_dp"
+        android:src="@drawable/icon_courier_with_pizza"
+        app:civ_border_color="@color/light_gray_ellipse_greeting"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right_for_image"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/icon_30_min"
+        app:layout_constraintTop_toTopOf="@id/guide_line_horizontal_top" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/icon_30_min"
+        android:layout_width="@dimen/value_120_dp"
+        android:layout_height="@dimen/value_120_dp"
+        android:src="@drawable/icon_30min"
+        app:civ_border_color="@color/light_gray_ellipse_greeting"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right_for_image"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left_for_image"
+        app:layout_constraintTop_toTopOf="@id/guide_line_horizontal_top" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/icon_courier_bike"
+        android:layout_width="@dimen/value_120_dp"
+        android:layout_height="@dimen/value_120_dp"
+        android:src="@drawable/icon_courier_bike"
+        app:civ_border_color="@color/light_gray_ellipse_greeting"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right_for_image"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toTopOf="@id/guide_line_horizontal_top_first_for_image" />
+
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/icon_cooking_pizza"
+        android:layout_width="@dimen/value_120_dp"
+        android:layout_height="@dimen/value_120_dp"
+        android:src="@drawable/icon_cooking_pizza"
+        app:civ_border_color="@color/light_gray_ellipse_greeting"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_rectangle"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right_for_image"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left_for_image"
+        app:layout_constraintTop_toTopOf="@id/guide_line_horizontal_top_second_for_image" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/icon_choose_pizza"
+        android:layout_width="@dimen/value_120_dp"
+        android:layout_height="@dimen/value_120_dp"
+        android:src="@drawable/icon_choose_pizza"
+        app:civ_border_color="@color/light_gray_ellipse_greeting"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_rectangle"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right_for_image"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/icon_cooking_pizza"
+        app:layout_constraintTop_toTopOf="@id/guide_line_horizontal_top_second_for_image" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/icon_love_phone"
+        android:layout_width="@dimen/value_120_dp"
+        android:layout_height="@dimen/value_120_dp"
+        android:src="@drawable/icon_love_phone"
+        app:civ_border_color="@color/light_gray_ellipse_greeting"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_rectangle"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left_for_image"
+        app:layout_constraintTop_toTopOf="@id/guide_line_horizontal_top_first_for_image" />
+
+    <View
+        android:id="@+id/bottom_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/custom_bottom_rectangle_greeting"
+        style="@style/RectangleStyleGreeting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/value_24_dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/pizza_sentence_greeting_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/value_16_sp"
+        app:layout_constraintBottom_toTopOf="@id/join_button"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toTopOf="@id/bottom_rectangle" />
+
+    <Button
+        android:id="@+id/join_button"
+        android:layout_width="@dimen/value_240_dp"
+        android:layout_height="@dimen/value_40_dp"
+        android:background="@drawable/custom_button_greeting"
+        android:text="@string/join_text"
+        style="@style/ButtonRegStyle"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/value_16_dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/have_acc_text"
+        android:textSize="@dimen/value_16_sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/join_button" />
+
+    <Button
+        android:id="@+id/enter_button"
+        android:layout_width="@dimen/value_240_dp"
+        android:layout_height="@dimen/value_40_dp"
+        android:layout_marginTop="@dimen/value_12_dp"
+        android:background="@drawable/custom_button_greeting"
+        style="@style/ButtonEnterStyle"
+        android:text="@string/enter_text"
+        app:layout_constraintBottom_toTopOf="@id/guide_line_horizontal_bottom"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/textView3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

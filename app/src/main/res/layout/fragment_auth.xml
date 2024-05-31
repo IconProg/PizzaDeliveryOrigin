@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/value_24_dp"
+        app:layout_editor_absoluteY="@dimen/value_24_dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/value_24_dp"
+        app:layout_editor_absoluteY="@dimen/value_24_dp" />
+
+    <TextView
+        android:id="@+id/your_email"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/value_120_dp"
+        android:layout_marginStart="@dimen/value_8_dp"
+        android:text="@string/your_email"
+        android:textSize="@dimen/value_12_sp"
+        app:layout_constraintBottom_toTopOf="@id/editText_email"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_email"
+        style="@style/EditTextStyle"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edit_text"
+        android:minHeight="@dimen/value_48_dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/your_email" />
+
+    <TextView
+        android:id="@+id/your_password"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/value_8_dp"
+        android:layout_marginTop="@dimen/value_24_dp"
+        android:text="@string/your_password"
+        android:textSize="@dimen/value_12_sp"
+        app:layout_constraintBottom_toTopOf="@id/editText_password"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/editText_email" />
+
+    <EditText
+        android:id="@+id/editText_password"
+        style="@style/EditTextStyle"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edit_text"
+        android:minHeight="@dimen/value_48_dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/your_password"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/enter_button"
+        style="@style/ButtonStyle"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="@dimen/value_48_dp"
+        android:layout_marginTop="@dimen/value_32_dp"
+        android:background="@drawable/custom_button_greeting"
+        android:text="@string/enter"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/editText_password" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.AboutTheCompanyFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/value_48_dp"
+        app:layout_editor_absoluteX="@dimen/value_48_dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/value_24_dp"
+        app:layout_editor_absoluteX="@dimen/value_24_dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/value_24_dp"
+        app:layout_editor_absoluteY="@dimen/value_24_dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/value_24_dp"
+        app:layout_editor_absoluteY="@dimen/value_24_dp" />
+
+        <include
+            android:id="@+id/toolbar_main_pizza"
+            layout="@layout/custom_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_16_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="@dimen/value_0_dp"
+            android:layout_height="wrap_content"
+            android:text="@string/about_company"
+            android:textSize="@dimen/value_16_sp"
+            app:layout_constraintBottom_toBottomOf="@id/guide_line_horizontal_bottom"
+            app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+            app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_main_pizza"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

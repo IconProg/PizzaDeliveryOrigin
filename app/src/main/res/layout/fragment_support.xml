@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.SupportFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_horizontal_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/value_48_dp"
+            app:layout_editor_absoluteX="@dimen/value_48_dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_horizontal_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="@dimen/value_24_dp"
+            app:layout_editor_absoluteX="@dimen/value_24_dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_vertical_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/value_24_dp"
+            app:layout_editor_absoluteY="@dimen/value_24_dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_vertical_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/value_24_dp"
+            app:layout_editor_absoluteY="@dimen/value_24_dp" />
+
+        <include
+            android:id="@+id/toolbar_main_pizza"
+            layout="@layout/custom_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_16_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="@dimen/value_0_dp"
+            android:layout_height="wrap_content"
+            android:text="@string/support_text_name_phone"
+            android:textSize="@dimen/value_18_sp"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_vertical_right"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_vertical_left"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_main_pizza" />
+
+        <TextView
+            android:id="@+id/your_name"
+            android:layout_width="@dimen/value_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/value_8_dp"
+            android:layout_marginTop="@dimen/value_24_dp"
+            android:text="@string/your_name"
+            android:textSize="@dimen/value_12_sp"
+            app:layout_constraintBottom_toTopOf="@id/editText_name"
+            app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+            app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+            app:layout_constraintTop_toBottomOf="@id/textView8" />
+
+        <EditText
+            android:id="@+id/editText_name"
+            style="@style/EditTextStyle"
+            android:layout_width="@dimen/value_0_dp"
+            android:layout_height="@dimen/value_40_dp"
+            android:background="@drawable/custom_edit_text"
+            app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+            app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+            app:layout_constraintTop_toBottomOf="@id/your_name" />
+
+        <TextView
+            android:id="@+id/your_number_phone"
+            android:layout_width="@dimen/value_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/value_8_dp"
+            android:layout_marginTop="@dimen/value_24_dp"
+            android:text="@string/your_number_phone"
+            android:textSize="@dimen/value_12_sp"
+            app:layout_constraintBottom_toTopOf="@id/editText_number_phone"
+            app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+            app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+            app:layout_constraintTop_toBottomOf="@id/editText_name" />
+
+        <EditText
+            android:id="@+id/editText_number_phone"
+            style="@style/EditTextStyle"
+            android:layout_width="@dimen/value_0_dp"
+            android:layout_height="@dimen/value_40_dp"
+            android:background="@drawable/custom_edit_text"
+            app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+            app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left"
+            app:layout_constraintTop_toBottomOf="@id/your_number_phone" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/value_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_48_dp"
+            android:src="@drawable/image_support"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_vertical_right"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_vertical_left"
+            app:layout_constraintTop_toBottomOf="@+id/editText_number_phone" />
+
+        <Button
+            android:id="@+id/button_call"
+            style="@style/RedButtonStyle"
+            android:layout_width="@dimen/value_240_dp"
+            android:layout_height="@dimen/value_48_dp"
+            android:layout_marginTop="@dimen/value_24_dp"
+            android:text="@string/order_call"
+            android:textSize="@dimen/value_16_sp"
+            app:layout_constraintBottom_toTopOf="@+id/guide_line_horizontal_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_vertical_right"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_vertical_left"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

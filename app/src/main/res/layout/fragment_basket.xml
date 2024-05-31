@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.BasketFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/value_16_dp"
+        app:layout_editor_absoluteX="@dimen/value_24_dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/value_16_dp"
+        app:layout_editor_absoluteX="@dimen/value_24_dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/value_16_dp"
+        app:layout_editor_absoluteY="@dimen/value_24_dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/value_16_dp"
+        app:layout_editor_absoluteY="@dimen/value_24_dp" />
+
+    <include
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/value_8_dp"
+        layout="@layout/custom_toolbar_with_back"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_basket"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="@dimen/value_0_dp"
+        android:paddingTop="@dimen/value_16_dp"
+        android:layout_marginBottom="@dimen/value_16_dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_address"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:listitem="@layout/item_pizza_main_menu" />
+
+    <EditText
+        android:id="@+id/editText_address"
+        style="@style/EditTextStyle"
+        android:hint="@string/address"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="@dimen/value_40_dp"
+        android:background="@drawable/custom_edit_text"
+        android:layout_marginBottom="@dimen/value_16_dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@id/guide_line_vertical_left" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/RedButtonStyle"
+        android:layout_width="@dimen/value_240_dp"
+        android:layout_height="@dimen/value_48_dp"
+        android:layout_marginTop="@dimen/value_24_dp"
+        android:text="@string/order_pizza"
+        android:textSize="@dimen/value_16_sp"
+        app:layout_constraintBottom_toTopOf="@+id/guide_line_horizontal_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_vertical_left"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

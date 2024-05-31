@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/RecyclerViewStyleMainPizzaList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/value_16_dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/pizza_image"
+        android:layout_width="@dimen/value_160_dp"
+        android:layout_height="@dimen/value_160_dp"
+        android:src="@drawable/image_plug"
+        android:layout_margin="@dimen/value_16_dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pizza_name"
+        style="@style/RecyclerViewStyleText"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/value_16_dp"
+        android:paddingLeft="@dimen/value_16_dp"
+        android:text="@string/plug"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pizza_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pizza_text"
+        style="@style/RecyclerViewSmallText"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingLeft="@dimen/value_16_dp"
+        android:text="@string/plug"
+        app:layout_constraintBottom_toTopOf="@+id/pizza_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pizza_image"
+        app:layout_constraintTop_toBottomOf="@+id/pizza_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/pizza_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plug"
+        android:textColor="@color/light_very_red"
+        android:textSize="@dimen/value_16_sp"
+        android:layout_margin="@dimen/value_16_dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/ButtonStyle"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.MainPizzaFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/value_16_dp"
+        app:layout_editor_absoluteX="@dimen/value_24_dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/value_16_dp"
+        app:layout_editor_absoluteX="@dimen/value_24_dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/value_16_dp"
+        app:layout_editor_absoluteY="@dimen/value_24_dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/value_16_dp"
+        app:layout_editor_absoluteY="@dimen/value_24_dp" />
+
+    <include
+        android:id="@+id/toolbar_main_pizza"
+        layout="@layout/custom_toolbar"
+        android:layout_marginTop="@dimen/value_16_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="@dimen/value_0_px"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:layout_marginTop="@dimen/value_16_dp"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_main_pizza">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            style="@style/RecyclerViewStyleMainPizza"
+            android:divider="@drawable/divider"
+            android:padding="@dimen/value_8_dp"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/sort_by_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_rectangle_for_filters"
+                style="@style/FiltersStyleMainPizza"
+                android:paddingStart="@dimen/value_8_dp"
+                android:paddingEnd="@dimen/value_4_dp"
+                android:text="@string/by_letter"
+                android:textSize="@dimen/value_12_sp"
+                app:drawableRightCompat="@drawable/arrow_up" />
+
+            <TextView
+                android:id="@+id/sort_by_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_rectangle_for_filters"
+                style="@style/FiltersStyleMainPizza"
+                android:paddingStart="@dimen/value_8_dp"
+                android:paddingEnd="@dimen/value_4_dp"
+                android:text="@string/by_price"
+                android:textSize="@dimen/value_12_sp"
+                app:drawableRightCompat="@drawable/arrow_up" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_main"
+        android:layout_width="@dimen/value_0_dp"
+        android:layout_height="@dimen/value_0_dp"
+        android:paddingTop="@dimen/value_16_dp"
+        tools:listitem="@layout/item_pizza_main_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_vertical_right"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+    <TextView
+        android:id="@+id/placeholder_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder_text"
+        style="@style/RecyclerViewStyleText"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/recycler_view_main"
+        app:layout_constraintEnd_toEndOf="@id/recycler_view_main"
+        app:layout_constraintStart_toStartOf="@id/recycler_view_main"
+        app:layout_constraintTop_toTopOf="@id/recycler_view_main" />
+
+    <Button
+        android:id="@+id/refresh_button"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/refresh_button_text"
+        android:visibility="gone"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="@id/recycler_view_main"
+        app:layout_constraintEnd_toEndOf="@id/recycler_view_main"
+        app:layout_constraintStart_toStartOf="@id/recycler_view_main"
+        app:layout_constraintTop_toBottomOf="@+id/placeholder_text" />
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/customProgressBar"
+        layout="@layout/custom_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
